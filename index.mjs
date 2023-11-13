@@ -21,7 +21,9 @@ client.on(Events.ClientReady, (c) => {
 
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot) return;
-  if (message.channel.name != "アーカイブ") return;
+  // if (message.channel.name != "アーカイブ") return;
+  message.reply("messageを読み込みました");
+  console.log(message.content);
   const data = {
     date: message.createdAt,
     username: message.author.username,
