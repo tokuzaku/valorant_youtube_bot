@@ -22,7 +22,7 @@ client.on(Events.ClientReady, (c) => {
 client.on(Events.MessageCreate, async (message) => {
   if (message.author.bot) return;
   // if (message.channel.name != "アーカイブ") return;
-  message.reply("messageを読み込みました");
+  message.reply("messageを読み込んだ");
   console.log(message.content);
   const data = {
     date: message.createdAt,
@@ -42,7 +42,7 @@ client.on(Events.MessageCreate, async (message) => {
     // レスポンスを受け取る
     const jsonResponse = await response.json();
     console.log(jsonResponse);
-    message.reply("GASに送信しました");
+    message.reply("GASに送信した");
   } catch (error) {
     console.error("Error sending data to Google Sheets:", error);
   }
